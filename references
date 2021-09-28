@@ -1,0 +1,4 @@
+1. http://practicalcryptography.com/cryptanalysis/letter-frequencies-various-languages/english-letter-frequencies/
+This is where I download n-gram frequencies
+2. https://sar.informatik.hu-berlin.de/research/publications/SAR-PR-2006-05/SAR-PR-2006-05_.pdf
+This is where I found the algorithm to append 4 bytes to any arbitrary string to produce any arbitrary crc32 hash
