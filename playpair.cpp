@@ -5,9 +5,8 @@
 #define INDEX(R, C) ((R)*5 + (C))
 #define PREV(I) (((I)-1 + 5) % 5)
 
-Playfair::Playfair(string logFilename) : Crack<vec>(logFilename)
+Playfair::Playfair(unsigned numberOfThreads) : Crack<vec>(numberOfThreads)
 {
-    srand(time(NULL));
     s1 = new Score("../" MONOGRAMS);
     s2 = new Score("../" BIGRAMS);
     s3 = new Score("../" TRIGRAMS);
@@ -150,7 +149,8 @@ string Playfair::decrypt(string cipher, vec &key)
     return cipher;
 }
 
-string Playfair::keyToString(vec &key) {
+string Playfair::keyToString(vec &key)
+{
     string result = "===key===\n";
     result += string(key.begin(), key.end());
     return result;

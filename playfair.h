@@ -18,7 +18,7 @@ typedef vector<char> vec;
 class Playfair : public Crack<vec>
 {
 public:
-    Playfair(string logFilename);
+    Playfair(unsigned numberOfThreads);
     vec createNewKey();
     vec randomChangeKey(vec);
     string decrypt(string cipher, vec &key);

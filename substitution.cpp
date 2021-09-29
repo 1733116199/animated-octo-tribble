@@ -1,6 +1,6 @@
 #include "substitution.h"
 
-Substitution::Substitution(string logFilename) : Crack<map>(logFilename)
+Substitution::Substitution(unsigned numberOfThreads) : Crack<map>(numberOfThreads)
 {
     srand(time(NULL));
     s1 = new Score("../" MONOGRAMS);
@@ -41,9 +41,11 @@ string Substitution::decrypt(string cipher, map &key)
     return cipher;
 }
 
-string Substitution::keyToString(map &key) {
+string Substitution::keyToString(map &key)
+{
     string result = "===key===\n";
-    for (auto p : key) {
+    for (auto p : key)
+    {
         result.push_back(p.first);
         result += " -> ";
         result.push_back(p.second);

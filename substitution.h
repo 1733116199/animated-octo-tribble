@@ -18,7 +18,7 @@ typedef unordered_map<char, char> map;
 class Substitution : public Crack<map>
 {
 public:
-    Substitution(string logFilename);
+    Substitution(unsigned numberOfThreads);
     map createNewKey();
     map randomChangeKey(map);
     string decrypt(string cipher, map &key);

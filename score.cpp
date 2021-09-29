@@ -26,7 +26,7 @@ double Score::evaluate(string text)
 {
     std::transform(text.begin(), text.end(), text.begin(), ::toupper);
     unordered_map<string, uint64> freq;
-    
+
     int my_total = text.length() - n;
 
     double score = 0;
